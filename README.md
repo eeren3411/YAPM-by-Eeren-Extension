@@ -60,3 +60,17 @@ step 4-) Add to your browser.
 Step 4.1-) Just go your browsers extensions tab and activate Developer mode
 
 Step 4.2-) Add package, Select "dest" folder.
+
+# Images of extension, I guess?
+
+![image](https://user-images.githubusercontent.com/77689346/183841849-ee26d523-4368-45cb-ad3f-b2cf1fe5814c.png)
+
+![image](https://user-images.githubusercontent.com/77689346/183841693-68032688-c752-4134-9aea-0f7127c45266.png)
+
+![image](https://user-images.githubusercontent.com/77689346/183841802-37267736-3893-472e-a0bf-f8a33f957c19.png)
+
+![image](https://user-images.githubusercontent.com/77689346/183841956-9318a0b9-2533-4781-9dad-5fefb0d26cfd.png)
+
+![image](https://user-images.githubusercontent.com/77689346/183842067-1fe4df50-d3fd-44ca-9375-62b72dcd3a50.png)
+
+
