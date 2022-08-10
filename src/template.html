@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    </head>
+    <body style="min-height: 600px; max-height: 600px; min-width: 400px; max-width: 400px; padding: 12px; overflow-y: hidden">
+        <!-- Page Header  Start -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-9">
+                    <input id="searchBar" type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" autofocus/>
+                </div>
+                <div class="col-3">
+                    <img src="./icons/search.svg" height=70%/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-7">
+                    <button id="createPasswordButton" class="btn btn-primary">Create New Password</button>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+        <!-- Password Container Start -->
+        <div class="container-fluid" id="passwordContainer" style="max-height: 442px; min-height: 442px; overflow-x: hidden; overflow-y: auto;">
+
+        </div>
+        <!-- Password Container End -->
+        <!-- Page Footer Start -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-2">
+                    <img src="./icons/sync.svg" height=70%/>
+                </div>
+                <div class="col-2">
+                    <img src="./icons/settings.svg" height=70%/>
+                </div>
+            </div>
+        </div>
+        <!-- Page Footer End -->
+        <!-- Get Password Modal Start -->
+        <div id="getPasswordModalDiv" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+          
+                <!-- Modal Content Start -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" id="getPasswordCross">&times;</button>
+                        <h4 class="modal-title">Enter Key</h4>
+                    </div>
+                    <div class="modal-body">
+                        <input type="password" placeholder="Enter Your Key" id="getPasswordKey"/>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-warning" id="getPasswordCancel">Cancel</button>
+                        <button type="button" class="btn btn-success" id="getPasswordEnter">Enter</button>
+                    </div>
+                </div>
+                <!-- Modal Content End-->
+            </div>
+        </div>
+        <!-- Get Password Modal End -->
+        <!-- New Password Modal Start -->
+        <div id="newPasswordModalDiv" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+          
+                <!-- Modal Content Start -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" id="newPasswordCross">&times;</button>
+                        <h4 class="modal-title">Create Password</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-1"></div>
+                            <div class="col-6">
+                                <label for="newPasswordName">Name:</label>
+                            </div>
+                            <div class="col-4">
+                                <input type="text" id="newPasswordName" name="newPasswordName" placeholder="Name" style="width: 100%">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-1"></div>
+                            <div class="col-6">
+                                <label for="newPasswordLength">Length:</label>
+                            </div>
+                            <div class="col-4">
+                                <input type="number" id="newPasswordLength" name="newPasswordLength" min="1" max="50" value="16" style="width: 100%">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-1"></div>
+                            <div class="col-6">
+                                <label for="newPasswordMustUpper">Must Uppercase:</label>
+                            </div>
+                            <div class="col-4">
+                                <input type="number" id="newPasswordMustUpper" name="newPasswordMustUpper" min="0" max="50" value="1" style="width: 100%">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-1"></div>
+                            <div class="col-6">
+                                <label for="newPasswordMustLower">Must Lowercase:</label>
+                            </div>
+                            <div class="col-4">
+                                <input type="number" id="newPasswordMustLower" name="newPasswordMustLower" min="0" max="50" value="1" style="width: 100%">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-1"></div>
+                            <div class="col-6">
+                                <label for="newPasswordMustNumber">Must Numbers:</label>
+                            </div>
+                            <div class="col-4">
+                                <input type="number" id="newPasswordMustNumber" name="newPasswordMustNumber" min="0" max="50" value="1" style="width: 100%">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-1"></div>
+                            <div class="col-6">
+                                <label for="newPasswordMustSymbol">Must Symbols:</label>
+                            </div>
+                            <div class="col-4">
+                                <input type="number" id="newPasswordMustSymbol" name="newPasswordMustSymbol" min="0" max="50" value="1" style="width: 100%">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-warning" id="newPasswordCancel">Cancel</button>
+                        <button type="button" class="btn btn-success" id="newPasswordCreate">Create</button>
+                    </div>
+                </div>
+                <!-- Modal Content End-->
+            </div>
+        </div>
+        <!-- New Password Modal End -->
+        <!-- Ask Modal Start -->
+        <div id="askModalDiv" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+          
+                <!-- Modal Content Start -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" id="askCross">&times;</button>
+                        <h4 class="modal-title">Are you sure?</h4>
+                    </div>
+                    <div class="modal-body">
+                        <h3>Are you sure you want to delete password "<span id="askMessage" style="color: red;"></span>"</h3>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" id="askCancel">Cancel</button>
+                        <button type="button" class="btn btn-danger" id="askOkay">Okay</button>
+                    </div>
+                </div>
+                <!-- Modal Content End-->
+            </div>
+        </div>
+        <!-- Ask Modal End -->
+    </body>
+</html>
